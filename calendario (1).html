@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Calendario de Reconciliación</title>
+  <style>
+    body {
+      font-family: "Trebuchet MS", sans-serif;
+      background: linear-gradient(to bottom, #ffe6eb, #fff);
+      text-align: center;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      color: #d94f70;
+      margin-bottom: 20px;
+    }
+    .calendario {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 12px;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .dia {
+      background: #ffccda;
+      border-radius: 15px;
+      padding: 15px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+      box-shadow: 0px 3px 6px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+    .dia:hover {
+      transform: scale(1.05);
+      background: #ffb3c9;
+    }
+    .mensaje {
+      display: none;
+      margin-top: 20px;
+      font-size: 18px;
+      color: #333;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 600px;
+      margin: auto;
+      box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
+    }
+    button {
+      margin-top: 20px;
+      padding: 12px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 10px;
+      background-color: #ff809f;
+      color: white;
+      cursor: pointer;
+      box-shadow: 0px 3px 6px rgba(0,0,0,0.2);
+    }
+    button:hover {
+      background-color: #e76a88;
+    }
+  </style>
+</head>
+<body>
+  <h1>💖 Nuestro Calendario de amor, me esforzare cada dia mas. Por mi, para ti, por nosotros💖</h1>
+  <p>Cada día tiene un detalle especial para ti 🌸</p>
+
+  <button onclick="window.open('https://www.youtube.com/watch?v=tZgrGe-Wm84','_blank')">
+    ▶ Nuestra canción: Mi Reina Consentida
+  </button>
+
+  <div class="calendario">
+    <script>
+      for (let i = 1; i <= 30; i++) {
+        document.write(`<div class="dia" onclick="mostrarMensaje(${i})">Día ${i}</div>`);
+      }
+    </script>
+  </div>
+
+  <div id="mensaje" class="mensaje"></div>
+
+  <script>
+    const mensajes = {
+      1: "💌 Gracias por seguir a mi lado, eres lo mejor que tengo. Y te demostrare que seras lo unico que tendre hasta el dia en que muera... eres lo que necesito.",
+      2: "🌹 Prometo escucharte más y hablar con el corazón. Prometo que siempre siempre, te escuchare y estare atento a tus cosas.",
+      3: "😊 Me haces feliz con solo existir, nunca lo olvides.",
+      4: "🎶 Esta canción siempre me recuerda a ti: Mi Reina Consentida.",
+      5: "📸 Hoy quiero hacerte saber que cada recuerdo, foto, momento juntos quedo tatuado en mi alma por siempre.",
+      6: "💖 Prometo mejorar cada día por mi, para ti, por nosotros.",
+      7: "🍫 Hoy te regalo un detalle dulce, aunque sea virtual, me esforce haciendolo y aunque es sencillo espero te guste.",
+      8: "✨ Eres mi razón de sonreír, incluso en los días difíciles, tu me das fuerzas y calor, asi sea que me trates frio ahora...",
+      9: "🌍 Sueño con seguir a tu lado, recorriendo el mundo, estando juntos y no separandome de tu lado.",
+      10: "💍 Mi promesa es nunca rendirme en lo nuestro.",
+      11: "🌷 Gracias por darme tantas oportunidades de aprender contigo.",
+      12: "📖 Nuestro libro de recuerdos aún tiene muchas páginas por escribir.",
+      13: "🎁 Hoy te regalo mis pensamientos más lindos.",
+      14: "💌 quiero pasar todos los días contigo, dandote detallitos que te demuestren que te amo cada dia mas.",
+      15: "🌟 Mi meta es hacerte sonreír siempre.",
+      16: "🍀 Qué suerte la mía haberte encontrado.",
+      17: "🐻 Me encantas más de lo que las palabras pueden decir.",
+      18: "🕊️ Prometo ser paz y no tormenta en tu vida. Prometo darte tranquilidad y solo felicidad porque te amo.",
+      19: "🎨 Tú pintas de colores mis días grises.",
+      20: "🎂 Eres mi dulce favorito cada día.",
+      21: "🌙 Pienso en ti cada noche antes de dormir.",
+      22: "☀️ Y cada mañana eres mi primer pensamiento.",
+      23: "💌 Gracias por enseñarme a amar de verdad.",
+      24: "🎶 Hoy quiero dedicarte una canción especial: Mi Reina Consentida.",
+      25: "📸 Recuerda aquel momento que nos hizo reír sin parar.",
+      26: "✨ Prometo soñar contigo y contigo construir. Prometo construir mi futuro a tu lado, eres la base de mis pensamientos y proyectos",
+      27: "🌹 Tú eres la razón de este calendario.",
+      28: "💍 Lo nuestro es un compromiso de alma.",
+      29: "🌈 Aunque haya tormentas, siempre quiero caminar contigo.",
+      30: "💖 Con todo mi corazón: eres mi siempre."
+    };
+
+    function mostrarMensaje(dia) {
+      const msgDiv = document.getElementById("mensaje");
+      msgDiv.innerHTML = mensajes[dia];
+      msgDiv.style.display = "block";
+    }
+  </script>
+</body>
+</html>
